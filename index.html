@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1D9E75">
+<title>Control de Horas</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Horas">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <h1>Control de Horas</h1>
+  <button id="driveBtn" class="drive-btn" hidden title="Conectar Google Drive">☁️</button>
+</header>
+
+<main>
+  <section class="counters">
+    <div class="counter-card">
+      <span class="counter-label">Semana</span>
+      <span class="counter-value" id="weekTotal">0h</span>
+    </div>
+    <div class="counter-card">
+      <span class="counter-label">Mes</span>
+      <span class="counter-value" id="monthTotal">0h</span>
+    </div>
+    <div class="counter-card">
+      <span class="counter-label">Año</span>
+      <span class="counter-value" id="yearTotal">0h</span>
+    </div>
+  </section>
+
+  <section class="month-nav">
+    <button id="prevMonth" class="nav-btn" aria-label="Mes anterior">◀</button>
+    <span id="monthLabel" class="month-label">Julio 2026</span>
+    <button id="nextMonth" class="nav-btn" aria-label="Mes siguiente">▶</button>
+  </section>
+
+  <section class="calendar">
+    <div class="weekday-row">
+      <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+</main>
+
+<div id="modalOverlay" class="modal-overlay" hidden>
+  <div class="modal">
+    <h2 id="modalDate">1 de julio</h2>
+    <label class="field">
+      <span>Hora inicio</span>
+      <input type="time" id="inicioInput">
+    </label>
+    <label class="field">
+      <span>Hora fin</span>
+      <input type="time" id="finInput">
+    </label>
+    <p id="modalError" class="modal-error" hidden></p>
+    <div class="modal-actions">
+      <button id="deleteBtn" class="btn btn-danger">Borrar</button>
+      <button id="cancelBtn" class="btn btn-secondary">Cancelar</button>
+      <button id="saveBtn" class="btn btn-primary">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<script src="drive-sync.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
