@@ -1,9 +1,9 @@
-var CACHE_NAME = 'control-horas-v2';
+var CACHE_NAME = 'control-horas-v3';
 var ASSETS = [
   './index.html',
   './style.css',
   './app.js',
-  './drive-sync.js',
+  './gist-sync.js',
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png'

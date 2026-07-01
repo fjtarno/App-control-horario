@@ -18,8 +18,8 @@
     cacheEls();
     bindEvents();
     render();
-    if (window.DriveSync && typeof window.DriveSync.init === 'function') {
-      window.DriveSync.init({ onDataMerged: onExternalDataMerged });
+    if (window.GistSync && typeof window.GistSync.init === 'function') {
+      window.GistSync.init({ onDataMerged: onExternalDataMerged });
     }
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js').catch(function () {});
@@ -70,8 +70,8 @@
 
   function saveData(data) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    if (window.DriveSync && typeof window.DriveSync.queueUpload === 'function') {
-      window.DriveSync.queueUpload(data);
+    if (window.GistSync && typeof window.GistSync.queueUpload === 'function') {
+      window.GistSync.queueUpload(data);
     }
   }
 
