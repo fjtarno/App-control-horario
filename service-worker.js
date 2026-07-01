@@ -1,4 +1,4 @@
-var CACHE_NAME = 'control-horas-v1';
+var CACHE_NAME = 'control-horas-v2';
 var ASSETS = [
   './index.html',
   './style.css',

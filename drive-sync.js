@@ -11,7 +11,7 @@
 window.DriveSync = (function () {
   'use strict';
 
-  var CLIENT_ID = ''; // <-- PON AQUI TU CLIENT ID DE GOOGLE
+  var CLIENT_ID = '415750939070-e3pf9icmu53f6a2p1shfd9at6q1jg7qe.apps.googleusercontent.com';
   var SCOPE = 'https://www.googleapis.com/auth/drive.appdata';
   var FILE_NAME = 'control-horas.json';
   var API_BASE = 'https://www.googleapis.com/drive/v3/files';
